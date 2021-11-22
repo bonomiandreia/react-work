@@ -9,7 +9,11 @@ function App() {
     <div className="c-login">
       <div className="c-login__position">
         <h1>Pet Diary</h1>
-        <Card sx={{ p: '2% 2%', display: 'flex', alignItems: 'center', width: 600 }}>
+        <Card sx={{ p: '2% 2%', m: '3% 3%', display: 'flex', alignItems: 'center', width: {
+          sx: 100,
+          sm: 300,
+          md: 600,
+        }}}>
 
         <Grid container spacing={2}>
           <Grid item xs={12}>
