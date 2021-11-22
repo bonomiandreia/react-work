@@ -1,3 +1,24 @@
-.background-paws {
-  
+.c-login {
+    background-image: url('../assets/background.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+    &__position {
+        align-items: center;
+        text-align: center;
+        
+    } 
+}
+
+h1 {
+    color: white;
 }
