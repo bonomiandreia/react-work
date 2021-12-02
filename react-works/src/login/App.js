@@ -2,7 +2,8 @@ import './App.scss';
 import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+import BlueButton from '../components/Blue-button/Blue-button'
 
 function App() {
   return (
@@ -30,7 +31,15 @@ function App() {
               />
             </Grid>
             <Grid item xs={12}>
-              <Button variant="contained" size="large" fullWidth>LOGIN IN</Button>
+              <BlueButton name="LOGIN IN"></BlueButton>
+            </Grid>
+            <Grid item xs={12}>
+            <Link
+                component="button"
+                variant="body2"
+              >
+                Create an account!
+            </Link>
             </Grid>
           </Grid>
         </Card>
