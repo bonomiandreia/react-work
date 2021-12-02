@@ -3,9 +3,14 @@ import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-import BlueButton from '../components/Blue-button/Blue-button'
+import BlueButton from '../components/Blue-button/Blue-button';
+import useStyles from '../components/Gray-input/Gray-input';
+
 
 function App() {
+  const styleProps = { backgroundColor: '#E2E2E2'};
+  const classes = useStyles(styleProps);
+
   return (
     <div className="c-login">
       <div className="c-login__position">
@@ -19,6 +24,8 @@ function App() {
             <Grid item xs={12}>
               <TextField
                 id="outlined-name"
+                className={classes.input}
+                size="small"
                 label="email"
                 fullWidth
               />
@@ -26,12 +33,14 @@ function App() {
             <Grid item xs={12}>
               <TextField
                 id="outlined-name"
+                className={classes.input}
+                size="small"
                 label="password"
                 fullWidth
               />
             </Grid>
             <Grid item xs={12}>
-              <BlueButton name="LOGIN IN"></BlueButton>
+              <BlueButton onClick={() => { console.log("button clicked");}} name="LOGIN IN"></BlueButton>
             </Grid>
             <Grid item xs={12}>
             <Link

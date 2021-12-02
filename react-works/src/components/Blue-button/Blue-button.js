@@ -4,8 +4,9 @@ import Button from '@mui/material/Button';
 const BlueButton = (props) => {
   return(
     <Button 
-    fullWidth
-    style={{backgroundColor: '#1F9EBC', color: '#FFFFFF'}}
+      fullWidth
+      onClick={props.onClick}
+      style={{backgroundColor: '#1F9EBC', color: '#FFFFFF'}}
     > { props.name } </Button>
   )
 }
