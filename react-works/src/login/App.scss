@@ -1,3 +1,6 @@
+$small: 320px;
+$medium: 900px;
+
 .c-login {
     background-image: url('../assets/background.png');
     -webkit-background-size: cover;
@@ -15,7 +18,14 @@
     &__position {
         align-items: center;
         text-align: center;
-        
+
+        @media (min-width: 600px) {
+            width: 300px;
+        }
+
+        @media (min-width: 900px) {
+            width: 500px;
+        }
     } 
 }
 
