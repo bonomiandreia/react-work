@@ -5,11 +5,13 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import BlueButton from '../components/Blue-button/Blue-button';
 import useStyles from '../components/Gray-input/Gray-input';
+import linkStyle from '../components/Link/Link';
 
 
 function App() {
-  const styleProps = { backgroundColor: '#E2E2E2'};
-  const classes = useStyles(styleProps);
+  const background = { backgroundColor: '#E2E2E2'};
+  const classes = useStyles(background);
+  const linkStyles = linkStyle();
 
   return (
     <div className="c-login">
@@ -45,7 +47,7 @@ function App() {
             <Grid item xs={12}>
             <Link
                 component="button"
-                variant="body2"
+                className={linkStyles.link}
               >
                 Create an account!
             </Link>
