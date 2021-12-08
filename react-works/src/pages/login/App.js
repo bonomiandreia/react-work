@@ -3,9 +3,9 @@ import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-import BlueButton from '../components/Blue-button/Blue-button';
-import useStyles from '../components/Gray-input/Gray-input';
-import linkStyle from '../components/Link/Link';
+import BlueButton from '../../../src/components/Blue-button/Blue-button';
+import useStyles from '../../../src/components/Gray-input/Gray-input';
+import linkStyle from '../../../src/components/Link/Link';
 
 
 function App() {

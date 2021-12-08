@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './login/App';
+import App from './pages/login/App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Route, Routes
+} from 'react-router-dom';
+import Posts from './pages/Posts/Posts.lazy';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<App />} />
+        <Route exact path="/login" element={<App />} />
+        <Route exact path="/Posts" element={<Posts />} />
+      </Routes>
+  </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
