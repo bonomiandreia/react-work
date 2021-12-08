@@ -8,6 +8,7 @@ import {
   Route, Routes
 } from 'react-router-dom';
 import Posts from './pages/Posts/Posts.lazy';
+import CreateAccount from './pages/CreateAccount/CreateAccount.lazy';
 
 
 
@@ -17,7 +18,8 @@ ReactDOM.render(
       <Routes>
         <Route exact path="/" element={<App />} />
         <Route exact path="/login" element={<App />} />
-        <Route exact path="/Posts" element={<Posts />} />
+        <Route exact path="/posts" element={<Posts />} />
+        <Route exact path="/create-account" element={<CreateAccount />} />
       </Routes>
   </Router>
   </React.StrictMode>,
