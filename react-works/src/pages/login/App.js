@@ -8,6 +8,8 @@ import useStyles from '../../../src/components/Gray-input/Gray-input';
 import linkStyle from '../../../src/components/Link/Link';
 import { Formik, Form, useFormik } from 'formik';
 import * as yup from 'yup';
+import loginService from '../../services/login'
+import { history } from '../../history';
 
 
 function App() {
@@ -32,7 +34,14 @@ function App() {
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(values)
+      loginService(values)
+      .then(res => {
+        const { data } = res;
+        if (data) {
+          localStorage.setItem('token', data.token);
+          history.go('/posts')
+        }
+      })
     },
   });
 
